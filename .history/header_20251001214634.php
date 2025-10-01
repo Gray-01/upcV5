@@ -63,17 +63,17 @@
         <!--mobilnoe menu  -->
 
         <nav class="header__nav">
-    <?php
+
+            <?php
     wp_nav_menu(array(
         'theme_location' => 'header_menu',
         'container'      => false,
-        'menu_class'     => 'nav__list',
-        'fallback_cb'    => false, // если меню пустое, ничего не выводить
-        'walker'         => new Upcv5_Walker_Nav_Menu()
+        'menu_class'     => 'header__list',
+        'fallback_cb'    => 'upcv5_default_menu' // если меню пустое, вывести дефолт
     ));
     ?>
-</nav>
 
+        </nav>
 
       </div>
 

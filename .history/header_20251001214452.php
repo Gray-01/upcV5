@@ -63,17 +63,35 @@
         <!--mobilnoe menu  -->
 
         <nav class="header__nav">
-    <?php
-    wp_nav_menu(array(
-        'theme_location' => 'header_menu',
-        'container'      => false,
-        'menu_class'     => 'nav__list',
-        'fallback_cb'    => false, // если меню пустое, ничего не выводить
-        'walker'         => new Upcv5_Walker_Nav_Menu()
-    ));
-    ?>
-</nav>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Головна</a>
+            </li>
+            <li class="nav__item nav__has-submenu">
+              <a class="nav__link" href="#">Послуги ▼</a>
+              <ul class="nav__submenu">
+                <li><a class="nav__link" href="#">Читання Псалтирі та Акафістів</a></li>
+                <li><a class="nav__link" href="#">Замовлення треб та поминань</a></li>
+              </ul>
+            </li>
+            <li class="nav__item nav__has-submenu">
+              <a class="nav__link" href="#">Наша парафія ▼</a>
+              <ul class="nav__submenu">
+                <li><a class="nav__link" href="#">Про парафію</a></li>
+                <li><a class="nav__link" href="#">Духовенство парафії</a></li>
+                <li><a class="nav__link" href="#">Підтримка парафії</a></li>
+                <li><a class="nav__link" href="#">Покровитель парафії</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Розклад</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Паломництва</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Молодь</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Пожертвування</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Новини</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Контакти</a></li>
+          </ul>
 
+        </nav>
 
       </div>
 

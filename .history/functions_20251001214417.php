@@ -66,31 +66,3 @@ function upcv5_default_menu() {
     echo '<li class="header__item"><a href="#">Контакти</a></li>';
     echo '</ul>';
 }
-
-// Кастомный Walker для меню с точными классами верстки
-class Upcv5_Walker_Nav_Menu extends Walker_Nav_Menu {
-    // Начало подменю
-    function start_lvl( &$output, $depth = 0, $args = array() ) {
-        $indent = str_repeat("\t", $depth);
-        $output .= "\n$indent<ul class=\"nav__submenu\">\n";
-    }
-
-    // Начало элемента меню
-    function start_el(  &$output, $item, $depth=0, $args=array(), $id=0  ) {
-        $indent = ( $depth ) ? str_repeat("\t", $depth) : '';
-        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-
-        $li_class = 'nav__item';
-        if ( in_array('menu-item-has-children', $classes) ) {
-            $li_class .= ' nav__has-submenu';
-        }
-
-        $output .= $indent . '<li class="'.esc_attr($li_class).'">';
-        $output .= '<a class="nav__link" href="'.esc_url($item->url).'">'.esc_html($item->title).'</a>';
-    }
-
-    // Конец элемента меню
-    function end_el( &$output, $item, $depth=0, $args=array() ) {
-        $output .= "</li>\n";
-    }
-}
