@@ -1,5 +1,5 @@
 <?php
-// Подключаем стили и скрипты
+// Подключаем стили и скрипты, и передаём путь темы в JS
 function upcv5_enqueue_assets() {
     // CSS
     wp_enqueue_style(
@@ -53,9 +53,8 @@ function upcv5_register_menus() {
 }
 add_action('after_setup_theme', 'upcv5_register_menus');
 
-// Кастомный Walker для меню с ACF
+// Кастомный Walker для меню с поддержкой ACF полей
 class Upcv5_Walker_Nav_Menu extends Walker_Nav_Menu {
-
     // Начало подменю
     function start_lvl(&$output, $depth = 0, $args = []) {
         $output .= '<ul class="nav__submenu">';
@@ -71,8 +70,8 @@ class Upcv5_Walker_Nav_Menu extends Walker_Nav_Menu {
         $menu_id = $item->ID;
 
         // Получаем ACF-поля
-        $custom_title = get_field('menu_title', $menu_id);
-        $custom_url = get_field('ссылка', $menu_id);
+        $custom_title = get_field('заголовок_меню', $menu_id);
+        $custom_url   = get_field('ссылка', $menu_id);
         $title_color  = get_field('цвет_текста', $menu_id);
         $hover_color  = get_field('цвет_при_наведении', $menu_id);
         $font_size    = get_field('размер_шрифта', $menu_id);
@@ -82,7 +81,7 @@ class Upcv5_Walker_Nav_Menu extends Walker_Nav_Menu {
 
         // Формируем стили
         $style = '';
-        if($title_color) $style .= "color: {$title_color} !important;";
+        if($title_color) $style .= "color: {$title_color};";
         if($font_size)   $style .= "font-size: {$font_size}px;";
 
         // Проверка на наличие сабменю
@@ -102,7 +101,7 @@ class Upcv5_Walker_Nav_Menu extends Walker_Nav_Menu {
     }
 }
 
-// Передаем информацию о наличии дочерних элементов
+// Передаем информацию о наличии дочерних элементов в Walker
 add_filter('wp_nav_menu_objects', function($items, $args) {
     foreach ($items as &$item) {
         $item->has_children = false;

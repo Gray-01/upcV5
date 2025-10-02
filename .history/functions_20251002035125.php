@@ -71,8 +71,8 @@ class Upcv5_Walker_Nav_Menu extends Walker_Nav_Menu {
         $menu_id = $item->ID;
 
         // Получаем ACF-поля
-        $custom_title = get_field('menu_title', $menu_id);
-        $custom_url = get_field('ссылка', $menu_id);
+        $custom_title = get_field('заголовок_меню', $menu_id);
+        $custom_url   = get_field('ссылка', $menu_id);
         $title_color  = get_field('цвет_текста', $menu_id);
         $hover_color  = get_field('цвет_при_наведении', $menu_id);
         $font_size    = get_field('размер_шрифта', $menu_id);
