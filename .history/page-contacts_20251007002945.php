@@ -11,9 +11,6 @@ get_header(); // Подключаем шапку темы
     </div>
 
     <div class="contacts__grid">
-      <?php
-      $btn_hover = get_field('button_hover'); // получаем hover цвет один раз
-      ?>
       <?php for ($i=1; $i<=5; $i++): ?>
         <?php
           $city = get_field("city_{$i}_name");
@@ -36,12 +33,4 @@ get_header(); // Подключаем шапку темы
   </section>
 </main>
 
-<?php if($btn_hover): ?>
-<style>
-.contacts__btn:hover {
-  background: <?php echo esc_attr($btn_hover); ?> !important;
-}
-</style>
-<?php endif; ?>
-
-<?php get_footer(); ?>
+<?php get_footer(); // Подключаем подвал темы ?>

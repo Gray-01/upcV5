@@ -1,8 +1,3 @@
-<?php
-/* Template Name: Contacts */
-get_header(); // Подключаем шапку темы
-?>
-
 <main class="contacts">
   <section class="contacts__section container">
     <h1><?php the_field('contacts_title'); ?></h1>
@@ -11,9 +6,6 @@ get_header(); // Подключаем шапку темы
     </div>
 
     <div class="contacts__grid">
-      <?php
-      $btn_hover = get_field('button_hover'); // получаем hover цвет один раз
-      ?>
       <?php for ($i=1; $i<=5; $i++): ?>
         <?php
           $city = get_field("city_{$i}_name");
@@ -35,13 +27,3 @@ get_header(); // Подключаем шапку темы
     </div>
   </section>
 </main>
-
-<?php if($btn_hover): ?>
-<style>
-.contacts__btn:hover {
-  background: <?php echo esc_attr($btn_hover); ?> !important;
-}
-</style>
-<?php endif; ?>
-
-<?php get_footer(); ?>

@@ -44,4 +44,4 @@ get_header(); // Подключаем шапку темы
 </style>
 <?php endif; ?>
 
-<?php get_footer(); ?>
+<?php get_footer(); // Подключаем подвал темы ?>
