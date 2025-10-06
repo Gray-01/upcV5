@@ -32,6 +32,11 @@
       ?>
     </div>
 
+    <!-- Кнопка для открытия модального окна -->
+    <a class="hero__contacts" id="openModal" href="#"><?php echo esc_html__('Наші храми', 'upcv5'); ?></a>
+
+    <!-- Подключаем модальное окно -->
+    <?php get_template_part('components/modal'); ?>
   </div>
 
 </section>

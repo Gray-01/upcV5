@@ -32,6 +32,10 @@
       ?>
     </div>
 
+    <a class="hero__contacts" id="openModal" href="#">Наші храми</a>
+
   </div>
+
+  <?php get_template_part('components/modal'); ?>
 
 </section>

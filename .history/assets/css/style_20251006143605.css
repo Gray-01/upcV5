@@ -865,55 +865,22 @@ h2.schedule__title {
 }
 
 /* 20251006_start */
-/* 1️⃣ Общие настройки для страницы контакты */
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* тело занимает весь экран */
-}
-
-/* Основной контент */
-main {
-    flex: 1;
-    /* занимает всё пространство между header и footer */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* центрируем по вертикали */
-    align-items: center;
-    /* центрируем по горизонтали */
-    padding: 40px 20px;
-}
-
-/* 2️⃣ Секция контактов */
 .contacts__section {
-    width: 100%;
-    max-width: 1200px;
+    padding: 40px 0;
     text-align: center;
-    margin: 0 auto;
 }
 
-/* Заголовок */
 .contacts__title {
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
-/* Сетка городов */
 .contacts__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-/* Карточка города */
 .contacts__card {
     padding: 20px;
     border: 1px solid #ddd;
@@ -922,13 +889,11 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Название города */
 .contacts__city {
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-/* Кнопка карты */
 .contacts__btn {
     display: inline-block;
     padding: 10px 16px;
@@ -942,11 +907,4 @@ main {
 
 .contacts__btn:hover {
     background: #003f7d;
-}
-
-/* 3️⃣ Футер */
-footer {
-    background: #f5f5f5;
-    padding: 20px;
-    text-align: center;
 }
