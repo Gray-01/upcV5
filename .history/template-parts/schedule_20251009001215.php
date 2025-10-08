@@ -3,21 +3,11 @@
     <div class="schedule__wraper">
       <!-- <h2 class="schedule__title">Розклад Богослужінь</h2> -->
 
-
-<?php if (function_exists('the_field')): ?>
-  <h2 class="schedule__title">
-    <?php
-    $title = get_field('schedule_title');
-    // Удаляем <p> и </p>
-    $title = str_replace(['<p>', '</p>'], '', $title);
-    echo wp_kses_post($title); // Безопасный вывод
-    ?>
-  </h2>
-<?php endif; ?>
-
-
-
-
+    <?php if (function_exists('the_field')): ?>
+      <h2 class="schedule__title">
+        <?php the_field('schedule_title'); ?>
+      </h2>
+    <?php endif; ?>
 
       <ul class="schedule__list">
 

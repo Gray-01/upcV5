@@ -1,36 +1,18 @@
 <section class="news">
   <div class="container">
-
-
-
     <?php if (function_exists('the_field')): ?>
       <h1 class="news__title">
-        <?php
-        $title = get_field('news_title');
-        // Удаляем <p> и </p>
-        $title = str_replace(['<p>', '</p>'], '', $title);
-        echo wp_kses_post($title); // Безопасный вывод
-        ?>
+        <?php the_field('news_title'); ?>
       </h1>
     <?php endif; ?>
 
-
     <!-- <h2 class="news__subtitle">ПАРАФІЯ НА ЧЕСТЬ СВВ. ЖІНОК-МИРОНОСИЦЬ</h2> -->
 
-<?php if (function_exists('the_field')): ?>
-  <h2 class="news__subtitle">
-    <?php
-    $subtitle = get_field('news_subtitle');
-    if ($subtitle) {
-        $subtitle = str_replace(['<p>', '</p>'], '', $subtitle); // Удаляем <p> и </p>
-        echo wp_kses_post($subtitle); // Безопасный вывод
-    } else {
-        echo 'Подзаголовок не задан'; // Запасной текст для отладки
-    }
-    ?>
-  </h2>
-<?php endif; ?>
-
+      <?php if (function_exists('the_field')): ?>
+        <h2 class="news__subtitle">
+          <?php the_field('news_subtitle'); ?>
+        </h2>
+      <?php endif; ?>
 
     <!-- <div class="news__wrapper">
       <p class="news__highlight">Дорогі брати та сестри!</p>

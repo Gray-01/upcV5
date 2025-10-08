@@ -17,20 +17,17 @@
 
     <!-- <h2 class="news__subtitle">ПАРАФІЯ НА ЧЕСТЬ СВВ. ЖІНОК-МИРОНОСИЦЬ</h2> -->
 
-<?php if (function_exists('the_field')): ?>
-  <h2 class="news__subtitle">
-    <?php
-    $subtitle = get_field('news_subtitle');
-    if ($subtitle) {
-        $subtitle = str_replace(['<p>', '</p>'], '', $subtitle); // Удаляем <p> и </p>
+      <?php if (function_exists('the_field')): ?>
+      <h2 class="news__subtitle">
+        <?php
+        $subtitle = get_field('news_subtitle');
+        // Удаляем <p> и </p>
+        $subtitle = str_replace(['<p>', '</p>'], '', $subtitle);
         echo wp_kses_post($subtitle); // Безопасный вывод
-    } else {
-        echo 'Подзаголовок не задан'; // Запасной текст для отладки
-    }
-    ?>
-  </h2>
-<?php endif; ?>
-
+        ?>
+      </h2>
+    <?php endif; ?>
+    <?php if (function_exists('the_field')): ?>
 
     <!-- <div class="news__wrapper">
       <p class="news__highlight">Дорогі брати та сестри!</p>

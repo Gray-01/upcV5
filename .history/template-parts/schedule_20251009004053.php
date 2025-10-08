@@ -3,6 +3,13 @@
     <div class="schedule__wraper">
       <!-- <h2 class="schedule__title">Розклад Богослужінь</h2> -->
 
+    <!-- <?php if (function_exists('the_field')): ?>
+      <h2 class="schedule__title">
+        <?php the_field('schedule_title'); ?>
+      </h2>
+    <?php endif; ?> -->
+
+
 
 <?php if (function_exists('the_field')): ?>
   <h2 class="schedule__title">
