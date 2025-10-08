@@ -1,0 +1,952 @@
+.container {
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Базовые стили body */
+body {
+    background-color: #fdfdf0;
+    color: #333;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body,
+p {
+    font-family: Lato, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+    color: #111;
+}
+
+h1 {
+    font-size: 2.5rem;
+
+    /* ~40px */
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+
+    /* ~32px */
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+
+    /* ~24px */
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.25rem;
+
+    /* ~20px */
+    font-weight: 400;
+}
+
+header {
+    position: fixed;
+    /* делает меню фиксированным */
+    top: 0;
+    /* прижимаем к верху */
+    left: 0;
+    /* растягиваем от левого края */
+    width: 100%;
+    /* на всю ширину экрана */
+    z-index: 1000;
+    /* чтобы было поверх всего контента */
+    background-color: #fff;
+    /* можно поставить фон под меню */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* тень для отделения от контента */
+}
+
+
+/* ====== HERO ====== */
+.hero {
+    width: 100%;
+    position: relative;
+    margin-bottom: 3.75rem;
+}
+
+h1.hero__title {
+    color: #fff;
+}
+
+.hero__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Контент баннера (h1, p, кнопка) */
+.hero__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 0 1.25rem;
+}
+
+/* Заголовок */
+.hero__title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    /* адаптивный размер */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Подзаголовок */
+.hero__subtitle {
+    font-family: Lato, sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Кнопка "Наші храми" */
+.hero__contacts {
+    display: inline-block;
+    background-color: #D0A930;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero__contacts:hover {
+    background-color: #BC8C12;
+    transform: scale(1.05);
+}
+
+/* ====== NAVIGATION ====== */
+.nav__list {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 10px;
+    border-bottom: 0.125rem solid #EAEAEA;
+}
+
+.nav__item {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    position: relative;
+}
+
+.nav__link {
+    display: block;
+    padding: 0.75rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    color: #1B365D;
+}
+
+.nav__link:hover {
+    background-color: #EAEAEA;
+    font-weight: 700;
+    color: #BC8C12;
+}
+
+/* Подменю */
+.nav__submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav__submenu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.nav__submenu li a:hover {
+    background-color: #EAEAEA;
+    font-weight: 700;
+}
+
+.nav__has-submenu:hover .nav__submenu {
+    display: block;
+}
+
+/* start burger */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 36px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.55);
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.burger:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    /* белые полоски */
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.burger:hover span {
+    background-color: #D0A930;
+    /* золотистая подсветка полосок */
+}
+
+
+
+/* mobile menu */
+/* Мобильное меню скрыто по умолчанию */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* уезжает за экран */
+    width: 260px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+    /* отступ под бургер */
+}
+
+.mobile-menu.active {
+    left: 0;
+    /* появляется */
+}
+
+.mobile-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-menu__list li {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.mobile-menu__list a {
+    display: block;
+    padding: 15px 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1B365D;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mobile-menu__list a:hover {
+    background-color: #EAEAEA;
+    color: #BC8C12;
+}
+
+/* start submenu */
+/* Сабменю по умолчанию скрыто */
+.submenu {
+    display: none;
+    padding-left: 15px;
+    background-color: #f9f9f9;
+}
+
+.submenu li {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.submenu a {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    color: #1B365D;
+}
+
+.submenu a:hover {
+    color: #BC8C12;
+}
+
+/* Стрелка */
+.has-submenu>a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 10px;
+    border: solid #1B365D;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    transform: rotate(-45deg);
+    /* ► */
+    transition: transform 0.3s ease;
+}
+
+/* Когда активно */
+.has-submenu.open>a .arrow {
+    transform: rotate(45deg);
+    /* ▼ */
+}
+
+.has-submenu.open>.submenu {
+    display: block;
+}
+
+/* 20250919 section news start */
+.news {
+    background-color: #F8F9FA;
+    margin-bottom: 2.5rem;
+    margin-top: 5rem;
+}
+
+h1.news__title {
+    text-align: center;
+    color: #1B365D;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+h2.news__subtitle {
+    text-align: center;
+    color: #D0A930;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.news__wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news__text {
+    margin-bottom: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.news__text:last-child {
+    margin-bottom: 0;
+}
+
+
+.news__highlight {
+    font-weight: 600;
+    margin: 2em 0 1.2em;
+    display: block;
+}
+
+.news__image-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.news__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* section schedule start */
+
+.schedule {
+    margin-bottom: 60px;
+}
+
+h2.schedule__title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 0 0.625rem;
+    color: #1B365D;
+}
+
+/* список */
+.schedule__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 75rem;
+    width: 100%;
+    /* margin: 0 auto 2.5rem; */
+    margin: 0 auto;
+    padding: 0 10px;
+    gap: 2.5rem;
+    box-sizing: border-box;
+}
+
+/* элемент списка */
+.schedule__item {
+    display: grid;
+    grid-template-columns: minmax(80px, 1fr) 2fr minmax(60px, 1fr) minmax(120px, 1fr);
+    align-items: start;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: #D0A930;
+    /*фон секции */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* блок даты */
+.schedule__datetime {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.schedule__day {
+    font-size: 0.875rem;
+    color: #555;
+}
+
+/* событие */
+.schedule__event {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* время и место */
+.schedule__time,
+.schedule__place {
+    text-align-last: left;
+}
+
+/* капитализация первых букв */
+.schedule__event::first-letter,
+.schedule__place::first-letter,
+.schedule__day::first-letter {
+    text-transform: uppercase;
+}
+
+/* 20250919 start announcements */
+.announcements {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.announcements__title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #1B365D;
+}
+
+.announcements__subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #D0A930;
+}
+
+.announcements__list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.announcement__item {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    gap: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement__item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.announcement__img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.announcement__date {
+    font-size: 0.875rem;
+    font-weight: 600;
+    /* color: #555; */
+    color: #D0A930;
+}
+
+.announcement__title {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #1B365D;
+    font-weight: 700;
+}
+
+.announcement__desc {
+    flex-grow: 1;
+    margin: 0.5rem 0;
+}
+
+.announcement__link {
+    align-self: flex-start;
+    text-decoration: none;
+    font-weight: 600;
+    color: #D0A930;
+}
+
+.announcement__link:hover {
+    color: #BC8C12;
+}
+
+/* кнопка старт */
+
+.announcements__actions {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.announcements__button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #f8f9fa;
+    color: #333;
+    border: 2px solid #BC8C12;
+    /* border-radius: 8px; */
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.announcements__button:hover {
+    background-color: #BC8C12;
+    color: #fff;
+}
+
+/* contacts start */
+.contacts {
+    background-color: #F8F9FA;
+    padding: 3rem 1rem;
+}
+
+.contacts__title {
+    text-align: center;
+    color: #1B365D;
+    margin-bottom: 2rem;
+}
+
+.contacts__blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contacts__block {
+    flex: 1 1 250px;
+    /* минимальная ширина 250px, адаптивно */
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacts__block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.contacts__block-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #D0A930;
+    margin-bottom: 0.5rem;
+}
+
+.contacts__name,
+.contacts__phone,
+.contacts__messengers,
+.contacts__social,
+.contacts__schedule {
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+}
+
+.contacts__social a {
+    color: #1B365D;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contacts__social a:hover {
+    color: #BC8C12;
+}
+
+/* footer start */
+.footer {
+    background-color: #1B365D;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 75rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+.footer__left {
+    max-width: 60%;
+}
+
+.footer__title {
+    color: #D0A930;
+    margin: 0 0 0.5rem 0;
+}
+
+.footer__subtitle {
+    margin: 0;
+}
+
+.footer__right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.footer__contact {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer__icon svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s ease;
+}
+
+.footer__icon:hover svg {
+    fill: #BC8C12;
+}
+
+.footer__bottom {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 20250929 start galery */
+/* Секция Недільна школа */
+.school {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.school__title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1B365D;
+}
+
+.school__subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.school__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.school__program {
+    flex: 1;
+    text-align: left;
+}
+
+.school__program-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #BC8C12;
+}
+
+.school__list {
+    list-style: disc inside;
+    color: #333;
+    line-height: 1.6;
+}
+
+.school__image-wrap {
+    flex: 1;
+    text-align: center;
+}
+
+.school__image {
+    max-width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.school__image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Галерея */
+.gallery {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery__content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.gallery__img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gallery__close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.gallery__prev,
+.gallery__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+
+.gallery__prev {
+    left: -60px;
+}
+
+.gallery__next {
+    right: -60px;
+}
+
+/* 20250929 start анимация секций */
+/* изначально секции чуть прозрачные и сдвинуты */
+.section-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+/* активная секция плавно проявляется */
+.section-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 20251006_start */
+/* 1️⃣ Общие настройки для страницы контакты */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* тело занимает весь экран */
+}
+
+/* Основной контент */
+main {
+    flex: 1;
+    /* занимает всё пространство между header и footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* центрируем по вертикали */
+    align-items: center;
+    /* центрируем по горизонтали */
+    padding: 40px 20px;
+}
+
+/* 2️⃣ Секция контактов */
+.contacts__section {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+.contacts__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Сетка городов */
+.contacts__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Карточка города */
+.contacts__card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Название города */
+.contacts__city {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Кнопка карты */
+.contacts__btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #005bbb;
+    /* твой фирменный цвет */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.contacts__btn:hover {
+    background: #003f7d;
+}
+
+/* 3️⃣ Футер */
+footer {
+    background: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}

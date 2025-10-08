@@ -30,16 +30,8 @@
           </div>
         <?php endif; ?>
 
-
-
-  <?php if (function_exists('the_field')): ?>
-    <?php $image = get_field('news_image'); ?>
-    <?php if ($image): ?>
-      <div class="news__image-wrapper">
-        <img class="news__img" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-      </div>
-    <?php endif; ?>
-  <?php endif; ?>
-
+    <div class="news__image-wrapper">
+      <img class="news__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/news-img.jpg" alt="Громада УПЦ">
+    </div>
   </div>
 </section>
