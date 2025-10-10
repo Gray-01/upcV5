@@ -13,9 +13,6 @@
           .schedule__item {
             background-color: <?php echo esc_attr(get_field('schedule_background_color') ?: '#D0A930'); ?> !important;
           }
-          .schedule__item:hover {
-            background-color: <?php echo esc_attr(get_field('schedule_hover_color') ?: '#e0b940'); ?> !important;
-          }
         </style>
         <ul class="schedule__list">
           <?php
