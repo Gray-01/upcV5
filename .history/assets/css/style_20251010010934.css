@@ -470,16 +470,6 @@ h2.schedule__title {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.schedule__item:hover {
-    background-color: #e0b940 !important;
-    /* Чуть светлее, чем #D0A930, или твой цвет */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    /* Усиленная тень */
-    transform: translateY(-2px);
-    /* Лёгкий подъём */
-}
-
-
 /* блок даты */
 .schedule__datetime {
     display: flex;

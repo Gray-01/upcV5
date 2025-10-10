@@ -475,7 +475,7 @@ h2.schedule__title {
     /* Чуть светлее, чем #D0A930, или твой цвет */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     /* Усиленная тень */
-    transform: translateY(-2px);
+    transform: translateY(-4px);
     /* Лёгкий подъём */
 }
 

@@ -471,14 +471,8 @@ h2.schedule__title {
 }
 
 .schedule__item:hover {
-    background-color: #e0b940 !important;
-    /* Чуть светлее, чем #D0A930, или твой цвет */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    /* Усиленная тень */
-    transform: translateY(-2px);
-    /* Лёгкий подъём */
+    background-color: #1B365D;
 }
-
 
 /* блок даты */
 .schedule__datetime {
