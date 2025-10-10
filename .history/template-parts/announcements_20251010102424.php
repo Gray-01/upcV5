@@ -41,24 +41,10 @@
           <?php endif; ?>
           <?php endfor; ?>
         </ul>
-        <div class="announcements__actions">
-          <style>
-            .announcements__button {
-              color: <?php echo esc_attr(get_field('announcements_button_color') ?: '#007bff'); ?> !important;
-              background-color: <?php echo esc_attr(get_field('announcements_button_bg') ?: '#fff'); ?> !important;
-              transition: all 0.3s ease;
-            }
-            .announcements__button:hover {
-              background-color: <?php echo esc_attr(get_field('announcements_button_bg_hover') ?: '#f0f0f0'); ?> !important;
-            }
-          </style>
-          <?php
-          $button_text = get_field('announcements_button_text');
-          $button_text = $button_text ? str_replace(['<p>', '</p>'], '', $button_text) : '<a href="#" class="announcements__button">Читати всі оголошення</a>';
-          echo wp_kses_post($button_text);
-          ?>
-        </div>
       <?php endif; ?>
+      <div class="announcements__actions">
+        <a href="#" class="announcements__button">Читати всі оголошення</a>
+      </div>
     </div>
   </div>
 </section>
