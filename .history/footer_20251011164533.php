@@ -48,11 +48,7 @@
     </div>
   </div>
   <div class="footer__bottom">
-    <?php
-    $copyright = get_field('footer_copyright');
-    $copyright = $copyright ? str_replace(['<p>', '</p>'], '', $copyright) : '© 2025 Українська Православна Церква в Швейцарії. Всі права захищені.';
-    echo wp_kses_post($copyright);
-    ?>
+    © 2025 Українська Православна Церква в Швейцарії. Всі права захищені.
   </div>
 </footer>
 
