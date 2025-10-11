@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== ГАЛЕРЕЯ =====
 
-const openGallery = document.getElementById('openGallery');
+  const openGallery = document.getElementById('openGallery');
 const galleryModal = document.getElementById('galleryModal');
 const galleryClose = document.getElementById('galleryClose');
 const galleryImage = document.getElementById('galleryImage');

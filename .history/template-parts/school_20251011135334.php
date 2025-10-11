@@ -39,34 +39,27 @@
       </div>
       <div class="school__image-wrap">
         <?php
-        $main_image = get_field('school_gallery_main_image');
-        $main_image_url = $main_image && isset($main_image['url']) ? $main_image['url'] : get_template_directory_uri() . '/assets/images/gallery/1.png';
-        $alt_text = $main_image && isset($main_image['alt']) ? $main_image['alt'] : (get_field('school_title') ? strip_tags(get_field('school_title')) : 'Недільна школа');
         $gallery_images = [];
         for ($i = 1; $i <= 20; $i++) {
           $image = get_field("gallery_image_$i");
-          if ($image && isset($image['url'])) {
-            $gallery_images[] = $image['url'];
+          if ($image) {
+            $gallery_images[] = [
+              'url' => $image['url'],
+              'alt' => $image['alt'] ?: 'Галерея ' . $i
+            ];
           }
         }
-        // Добавляем главное изображение в начало массива, если оно есть
-        if ($main_image && isset($main_image['url'])) {
-          array_unshift($gallery_images, $main_image['url']);
-        }
+        $main_image = !empty($gallery_images) ? $gallery_images[0]['url'] : get_template_directory_uri() . '/assets/images/gallery/1.png';
+        $alt_text = !empty($gallery_images) ? $gallery_images[0]['alt'] : 'Недільна школа';
         ?>
-        <img src="<?php echo esc_url($main_image_url); ?>"
+        <img src="<?php echo esc_url($main_image); ?>"
              alt="<?php echo esc_attr($alt_text); ?>"
              class="school__image" id="openGallery">
-        <?php if (!empty($gallery_images)): ?>
-          <script>
-            const galleryImages = <?php echo json_encode(array_filter($gallery_images)); ?>;
-          </script>
-        <?php else: ?>
-          <script>
-            const galleryImages = ["<?php echo esc_url($main_image_url); ?>"];
-          </script>
-        <?php endif; ?>
+        <script>
+          const galleryImages = <?php echo json_encode(array_column($gallery_images, 'url')); ?>;
+        </script>
       </div>
     </div>
   </div>
+  <?php var_dump(get_field('school_gallery_images')); ?>
 </section>
