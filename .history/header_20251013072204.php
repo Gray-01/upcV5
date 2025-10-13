@@ -6,20 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Громада УПЦ у Швейцарії</title>
 
-<style>
-  .burger span {
-    background-color: <?php echo esc_attr(get_field('burger_lines_color') ?: '#000'); ?> !important;
-  }
-
-  .burger:hover span {
-    background-color: <?php echo esc_attr(get_field('burger_lines_hover_color') ?: '#D0A930'); ?> !important;
-  }
-
-  .burger {
-    background: <?php echo esc_attr(get_field('burger_bg_color') ?: 'rgba(0, 0, 0, 0.55)'); ?> !important;
-  }
-</style>
-
   <?php wp_head(); ?>
 
 </head>
