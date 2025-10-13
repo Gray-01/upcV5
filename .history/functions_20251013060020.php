@@ -78,7 +78,7 @@ class Upcv5_Walker_Nav_Menu extends Walker_Nav_Menu {
         $font_size    = get_field('размер_шрифта', $menu_id);
 
         // $title = $custom_title ? $custom_title : $item->title;
-        $title = $item->title ? $item->title : ($custom_title ? $custom_title : $item->title);
+
         $url   = $custom_url ? $custom_url : $item->url;
 
         // Формируем стили

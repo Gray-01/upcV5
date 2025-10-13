@@ -28,15 +28,14 @@
         <!--mobilnoe menu  -->
         <div class="mobile-menu" id="mobileMenu">
 
-        <?php
-          wp_nav_menu(array(
-            'theme_location' => 'header_menu', // подтягиваем пункты главного меню
-            'container'      => false,
-            'menu_class'     => 'mobile-menu__list',
-            'fallback_cb'    => false,
-            'walker'         => new Upcv5_Walker_Nav_Menu() // чтобы сохранились стили и hover
-          ));
-        ?>
+          <?php
+            wp_nav_menu(array(
+              'theme_location' => 'mobile_menu',
+              'container'      => false,
+              'menu_class'     => 'mobile-menu__list',
+              'fallback_cb'    => false
+            ));
+          ?>
 
         </div>
         <!--mobilnoe menu  -->

@@ -77,8 +77,7 @@ class Upcv5_Walker_Nav_Menu extends Walker_Nav_Menu {
         $hover_color  = get_field('цвет_при_наведении', $menu_id);
         $font_size    = get_field('размер_шрифта', $menu_id);
 
-        // $title = $custom_title ? $custom_title : $item->title;
-        $title = $item->title ? $item->title : ($custom_title ? $custom_title : $item->title);
+        $title = $custom_title ? $custom_title : $item->title;
         $url   = $custom_url ? $custom_url : $item->url;
 
         // Формируем стили

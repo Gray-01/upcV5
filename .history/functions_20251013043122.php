@@ -77,8 +77,7 @@ class Upcv5_Walker_Nav_Menu extends Walker_Nav_Menu {
         $hover_color  = get_field('цвет_при_наведении', $menu_id);
         $font_size    = get_field('размер_шрифта', $menu_id);
 
-        // $title = $custom_title ? $custom_title : $item->title;
-        $title = $item->title ? $item->title : ($custom_title ? $custom_title : $item->title);
+        $title = $custom_title ? $custom_title : $item->title;
         $url   = $custom_url ? $custom_url : $item->url;
 
         // Формируем стили
@@ -116,15 +115,3 @@ add_filter('wp_nav_menu_objects', function($items, $args) {
     }
     return $items;
 }, 10, 2);
-
-// 20251013_start
-// Исправляем отображение пункта "Главная" в меню
-add_filter('wp_nav_menu_objects', function($items, $args) {
-    foreach ($items as &$item) {
-        // Заменяем текст пункта "Головна" на то, что задано в меню
-        if ($item->title === 'Головна') {
-            $item->title = 'Головна'; // сюда можно поставить любой текст, например 'Тест'
-        }
-    }
-    return $items;
-}, 20, 2);
