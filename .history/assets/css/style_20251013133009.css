@@ -1168,6 +1168,7 @@ footer {
 }
 
 /* 20251013_page pro parafiu */
+
 .pro-parafiyu {
     padding: 40px 20px;
     max-width: 1200px;
@@ -1180,16 +1181,6 @@ footer {
     text-align: center;
     margin-bottom: 20px;
     margin-top: 30px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.pro-parafiyu-heading {
-    font-size: 2.5rem;
-    color: #1B365D;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    font-family: 'Roboto', sans-serif;
 }
 
 .section-1,
@@ -1214,14 +1205,6 @@ footer {
     flex: 2;
     line-height: 1.6;
     color: #333;
-    font-family: 'Roboto', sans-serif;
-    /* Базовый шрифт */
-}
-
-.parafiyu-text p {
-    margin: 10px 0;
-    font-family: 'Roboto', sans-serif;
-    /* Шрифт для параграфов */
 }
 
 .section-2 .parafiyu-image {
@@ -1235,12 +1218,11 @@ footer {
     margin-top: 30px;
 }
 
-.custom-heading div {
+.custom-heading-content {
     font-size: 2.5rem;
     color: #1B365D;
     text-align: center;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 .custom-heading h1,
@@ -1250,7 +1232,6 @@ footer {
     color: #1B365D;
     text-align: center;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width: 768px) {

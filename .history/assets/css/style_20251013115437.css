@@ -1071,6 +1071,7 @@ footer {
     text-align: center;
     margin-bottom: 20px;
     margin-top: 30px;
+    /* Увеличенный отступ сверху, чтобы не залазил на меню */
 }
 
 .treb-pominan h2 {
@@ -1094,7 +1095,9 @@ footer {
     border-collapse: collapse;
     margin: 20px 0;
     border-radius: 10px;
+    /* Скругление углов таблицы */
     overflow: hidden;
+    /* Для скругления углов работает с border-radius */
 }
 
 .treb-table th,
@@ -1108,6 +1111,7 @@ footer {
 
 .treb-table th,
 .example-table th {
+    /* background-color: #1B365D; */
     background-color: #BC8C12;
     color: white;
 }
@@ -1134,16 +1138,6 @@ footer {
     margin-left: 20px;
 }
 
-.site-footer {
-    /* Стили для футера, предположим, что у него класс .site-footer */
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    background-color: #f8f8f8;
-    /* Пример цвета, подстрой под свою тему */
-    margin-top: 20px;
-}
-
 @media (max-width: 768px) {
 
     .treb-table,
@@ -1156,129 +1150,5 @@ footer {
         float: none;
         width: 100%;
         margin-left: 0;
-        text-align: center;
-        /* Центрирование второй таблицы на маленьких экранах */
-    }
-
-    .site-footer {
-        width: 100%;
-        margin-left: 0;
-        text-align: center;
-    }
-}
-
-/* 20251013_page pro parafiu */
-.pro-parafiyu {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.pro-parafiyu h1 {
-    font-size: 2.5rem;
-    color: #1B365D;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.pro-parafiyu-heading {
-    font-size: 2.5rem;
-    color: #1B365D;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.section-1,
-.section-2 {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.parafiyu-image {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.parafiyu-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.parafiyu-text {
-    flex: 2;
-    line-height: 1.6;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    /* Базовый шрифт */
-}
-
-.parafiyu-text p {
-    margin: 10px 0;
-    font-family: 'Roboto', sans-serif;
-    /* Шрифт для параграфов */
-}
-
-.section-2 .parafiyu-image {
-    margin-left: 20px;
-    margin-right: 0;
-}
-
-.custom-heading {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
-}
-
-.custom-heading div {
-    font-size: 2.5rem;
-    color: #1B365D;
-    text-align: center;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.custom-heading h1,
-.custom-heading h2,
-.custom-heading p {
-    font-size: 2.5rem;
-    color: #1B365D;
-    text-align: center;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-@media (max-width: 768px) {
-
-    .section-1,
-    .section-2 {
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-
-    .parafiyu-image {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .section-1 .parafiyu-image {
-        order: 1;
-    }
-
-    .section-1 .parafiyu-text {
-        order: 2;
-    }
-
-    .section-2 .parafiyu-image {
-        order: 3;
-    }
-
-    .section-2 .parafiyu-text {
-        order: 2;
     }
 }

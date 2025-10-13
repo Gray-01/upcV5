@@ -1180,16 +1180,6 @@ footer {
     text-align: center;
     margin-bottom: 20px;
     margin-top: 30px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.pro-parafiyu-heading {
-    font-size: 2.5rem;
-    color: #1B365D;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    font-family: 'Roboto', sans-serif;
 }
 
 .section-1,
@@ -1214,43 +1204,11 @@ footer {
     flex: 2;
     line-height: 1.6;
     color: #333;
-    font-family: 'Roboto', sans-serif;
-    /* Базовый шрифт */
-}
-
-.parafiyu-text p {
-    margin: 10px 0;
-    font-family: 'Roboto', sans-serif;
-    /* Шрифт для параграфов */
 }
 
 .section-2 .parafiyu-image {
     margin-left: 20px;
     margin-right: 0;
-}
-
-.custom-heading {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
-}
-
-.custom-heading div {
-    font-size: 2.5rem;
-    color: #1B365D;
-    text-align: center;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.custom-heading h1,
-.custom-heading h2,
-.custom-heading p {
-    font-size: 2.5rem;
-    color: #1B365D;
-    text-align: center;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -1264,6 +1222,7 @@ footer {
     .parafiyu-image {
         margin-right: 0;
         margin-bottom: 20px;
+        /* Отступ между картинкой и текстом */
     }
 
     .section-1 .parafiyu-image {

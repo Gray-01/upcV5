@@ -72,15 +72,3 @@
 
     </div>
   </header>
-
-<?php
-if (is_page('chytannya-psaltyri-ta-akafistiv')) {
-    get_template_part('template-parts/content', 'psaltyr-akafist');
-}
-if (is_page('zamovlennya-treb-ta-pominan')) {
-    get_template_part('template-parts/content', 'treb-pominan');
-}
-if (is_page('pro-parafiyu')) {
-    get_template_part('template-parts/content', 'pro-parafiyu');
-}
-?>
