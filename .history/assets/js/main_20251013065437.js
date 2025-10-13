@@ -89,20 +89,3 @@ if (openGallery && galleryModal) {
 });
 
 // 20251013_start v2
-window.addEventListener('resize', () => {
-  const mobileMenu = document.getElementById('mobileMenu');
-  const burger = document.getElementById('burger');
-  const openSubmenus = document.querySelectorAll('.nav__has-submenu.open');
-
-  if (window.innerWidth > 768) {
-    if (mobileMenu) {
-      mobileMenu.classList.remove('active');
-    }
-    if (burger) {
-      burger.classList.remove('active');
-    }
-    openSubmenus.forEach(submenu => {
-      submenu.classList.remove('open');
-    });
-  }
-});
