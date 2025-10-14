@@ -1587,56 +1587,10 @@ footer {
 }
 
 /* карточки */
-.molod {
-    background-color: #FDFDF0;
-    padding: 6rem 0;
-    font-family: var(--font-family, "Roboto", sans-serif);
-    color: var(--text-color, #222);
-}
-
-.molod__title {
-    color: #BC8C12;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    font-weight: 600;
-}
-
-/* Основная картинка - всегда по центру */
-.molod__image-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.molod__image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-    display: block;
-}
-
-.molod__subtitle {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.molod__text {
-    font-size: 1rem;
-    line-height: 1.7;
-    max-width: 900px;
-    margin: 0 auto 4rem;
-    text-align: justify;
-}
-
-/* Карточки */
 .molod-cards__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-bottom: 4rem;
 }
 
 .molod-card {
@@ -1664,6 +1618,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    text-align: center;
 }
 
 .molod-card__title {
