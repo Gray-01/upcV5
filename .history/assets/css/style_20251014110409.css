@@ -1365,48 +1365,4 @@ footer {
 }
 
 /* page Покровитель парафії */
-.patron {
-    background-color: #fdfdf0;
-    padding: 6rem 0 4rem;
-}
-
-.patron__title {
-    text-align: center;
-    color: #BC8C12;
-    margin-bottom: 3rem;
-    font-family: 'Playfair Display', serif;
-}
-
-.patron__content {
-    display: block;
-}
-
-.patron__image-wrapper {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    text-align: center;
-}
-
-.patron__image {
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.patron__text {
-    width: 100%;
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.7;
-    text-align: justify;
-}
-
-.patron__subtitle {
-    font-size: 1.4rem;
-    color: #1B365D;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 1rem;
-    text-align: center;
-}
+/* ====== Patron page ====== */

@@ -1365,27 +1365,28 @@ footer {
 }
 
 /* page Покровитель парафії */
+/* ====== Pokrovytel section ====== */
 .patron {
-    background-color: #fdfdf0;
+    background-color: #D0A930;
     padding: 6rem 0 4rem;
 }
 
 .patron__title {
     text-align: center;
-    color: #BC8C12;
+    color: #1B365D;
     margin-bottom: 3rem;
     font-family: 'Playfair Display', serif;
 }
 
 .patron__content {
-    display: block;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .patron__image-wrapper {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    text-align: center;
+    flex: 1 1 55%;
 }
 
 .patron__image {
@@ -1396,17 +1397,25 @@ footer {
 }
 
 .patron__text {
-    width: 100%;
+    flex: 1 1 40%;
     font-size: 1rem;
     color: #333;
     line-height: 1.7;
     text-align: justify;
 }
 
-.patron__subtitle {
-    font-size: 1.4rem;
-    color: #1B365D;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 1rem;
-    text-align: center;
+/* адаптив */
+@media (max-width: 992px) {
+    .patron__content {
+        flex-direction: column;
+    }
+
+    .patron__image-wrapper,
+    .patron__text {
+        flex: 1 1 100%;
+    }
+
+    .patron__image {
+        max-width: 100%;
+    }
 }

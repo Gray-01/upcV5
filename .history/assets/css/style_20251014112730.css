@@ -1372,20 +1372,25 @@ footer {
 
 .patron__title {
     text-align: center;
-    color: #BC8C12;
+    color: #1B365D;
     margin-bottom: 3rem;
     font-family: 'Playfair Display', serif;
 }
 
 .patron__content {
     display: block;
+    /* Убираем flex, текст и изображение идут друг под другом */
 }
 
 .patron__image-wrapper {
     width: 100%;
+    /* Изображение занимает всю ширину контейнера */
     max-width: 600px;
+    /* Ограничиваем максимальную ширину изображения (настраивайте по дизайну) */
     margin: 0 auto 2rem;
+    /* Центрируем и добавляем отступ снизу */
     text-align: center;
+    /* Центрируем изображение */
 }
 
 .patron__image {
@@ -1397,6 +1402,7 @@ footer {
 
 .patron__text {
     width: 100%;
+    /* Текст занимает всю ширину контейнера */
     font-size: 1rem;
     color: #333;
     line-height: 1.7;

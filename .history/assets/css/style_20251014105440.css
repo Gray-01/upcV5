@@ -1365,6 +1365,7 @@ footer {
 }
 
 /* page Покровитель парафії */
+/* ====== Patron page ====== */
 .patron {
     background-color: #fdfdf0;
     padding: 6rem 0 4rem;
@@ -1372,41 +1373,72 @@ footer {
 
 .patron__title {
     text-align: center;
-    color: #BC8C12;
+    color: #1B365D;
     margin-bottom: 3rem;
     font-family: 'Playfair Display', serif;
 }
 
+/* grid: картинка (левая колонка) + первый абзац (правая колонка) */
 .patron__content {
-    display: block;
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    gap: 2rem;
+    align-items: start;
 }
 
+/* картинка — левая колонка */
 .patron__image-wrapper {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    text-align: center;
+    grid-column: 1;
 }
 
-.patron__image {
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.patron__text {
-    width: 100%;
+/* первый абзац — правая колонка */
+.patron__text-right {
+    grid-column: 2;
     font-size: 1rem;
     color: #333;
     line-height: 1.7;
     text-align: justify;
 }
 
-.patron__subtitle {
-    font-size: 1.4rem;
-    color: #1B365D;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 1rem;
-    text-align: center;
+/* остальной текст — блок под сеткой, на всю ширину контейнера */
+.patron__text-full {
+    grid-column: 1 / -1;
+    /* применимо, если .patron__text-full внутри grid; у нас он уже ниже, но это безопасно */
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* изображение */
+.patron__image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* адаптив: в одну колонку */
+@media (max-width: 992px) {
+    .patron__content {
+        display: block;
+        /* упрощаем структуру для мобильных */
+    }
+
+    .patron__image-wrapper,
+    .patron__text-right,
+    .patron__text-full {
+        width: 100%;
+    }
+
+    .patron__image {
+        margin-bottom: 1rem;
+    }
+
+    /* Чтобы не оставалось странного отступа */
+    .patron__text-right {
+        margin-bottom: 0.75rem;
+    }
 }
