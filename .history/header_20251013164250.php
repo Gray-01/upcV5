@@ -83,7 +83,4 @@ if (is_page('zamovlennya-treb-ta-pominan')) {
 if (is_page('pro-parafiyu')) {
     get_template_part('template-parts/content', 'pro-parafiyu');
 }
-if (is_page('dukhovenstvo-parafiyi')) {
-    get_template_part('template-parts/content', 'dukhovenstvo-parafiyi');
-}
 ?>

@@ -1284,6 +1284,9 @@ footer {
 }
 
 /* page духовенство парафии */
+/* =========================
+   CLERGY PAGE
+   ========================= */
 .clergy {
     padding: 6rem 0;
     color: var(--text-color, #222);
@@ -1350,6 +1353,16 @@ footer {
     line-height: 1.7;
     margin-bottom: 1.2rem;
 }
+
+
+.clergy__text,
+.clergy__info {
+    font-size: 1.1rem;
+    /* увеличиваем размер текста */
+    line-height: 1.8;
+    /* чуть больше межстрочный интервал */
+}
+
 
 /* Адаптив */
 @media (max-width: 768px) {
