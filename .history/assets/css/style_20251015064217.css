@@ -426,9 +426,9 @@ h2.news__subtitle {
 
 .news__img {
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
 }
-
 
 /* section schedule start */
 
@@ -968,51 +968,86 @@ footer {
 
 /* page psaltyr-akafist */
 .psaltyr-akafist {
+    background-color: #FDFDF0;
     padding: 6rem 0;
+    font-family: var(--font-family, "Roboto", sans-serif);
     color: var(--text-color, #222);
-    font-family: var(--font-family, "Montserrat", sans-serif);
-    text-align: center;
 }
 
-.psaltyr__title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--title-color, #1c1c1c);
-}
-
-.psaltyr__subtitle {
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-bottom: 2.5rem;
+.psaltyr-akafist h1 {
     color: #BC8C12;
-    /* дефолтный цвет, если не задан в ACF */
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-.psaltyr__image-wrapper {
-    max-width: 800px;
-    margin: 0 auto 3rem;
+.psaltyr-akafist h2 {
+    color: #BC8C12;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.psaltyr__image {
+.psaltyr-akafist img {
+    display: block;
+    max-width: 900px;
     width: 100%;
     height: auto;
     border-radius: 1rem;
-    object-fit: cover;
+    margin: 0 auto 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .psaltyr-text {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    text-align: left;
-    font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--text-color, #333);
+    font-size: 1rem;
+    color: #333;
+    text-align: justify;
+}
+
+.psaltyr-text h3 {
+    color: #BC8C12;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .psaltyr-text p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
+
+.psaltyr-akafist strong {
+    color: #BC8C12;
+}
+
+.psaltyr-akafist em {
+    color: #8A6B0C;
+}
+
+@media (max-width: 768px) {
+    .psaltyr-akafist {
+        padding: 4rem 1.5rem;
+    }
+
+    .psaltyr-akafist h1 {
+        font-size: 2rem;
+    }
+
+    .psaltyr-akafist h2 {
+        font-size: 1.5rem;
+    }
+
+    .psaltyr-text {
+        font-size: 0.95rem;
+    }
+}
+
 
 
 /* start stranicu content-treb-pominan.php */
@@ -1658,7 +1693,7 @@ footer {
 }
 
 .molod-card__image-wrapper {
-    height: 290px;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -1734,7 +1769,7 @@ footer {
 }
 
 .news__image-wrapper {
-    height: auto;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -1829,125 +1864,4 @@ footer {
     font-size: 1rem;
     line-height: 1.6;
     text-align: center;
-}
-
-/* page psaltar akafist*/
-/* ========== Psaltar / Akafist — fixes for WP autop/wrapping ========== */
-
-/* Ensure styles apply when WP wraps content in <p> inside heading wrappers */
-.psaltyr__title,
-.psaltyr__title p {
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1.15;
-    margin: 0 0 1.5rem;
-    text-align: center;
-    color: var(--title-color, #1c1c1c);
-}
-
-/* If WP wrapped the user content inside <p>, remove extra margin on that <p> */
-.psaltyr__title p {
-    margin: 0;
-    padding: 0;
-}
-
-/* Subtitle (H2) — also target possible <p> wrapper */
-.psaltyr__subtitle,
-.psaltyr__subtitle p {
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.25;
-    margin: 0 0 2.5rem;
-    text-align: center;
-    color: var(--subtitle-color, #BC8C12);
-    /* default color */
-}
-
-/* If subtitle contains <p> (WP autop) — reset margins */
-.psaltyr__subtitle p {
-    margin: 0;
-    padding: 0;
-}
-
-/* Main image */
-.psaltyr__image-wrapper {
-    max-width: 900px;
-    margin: 0 auto 3rem;
-}
-
-/* Main text area — ensure headings inside WYSIWYG get styled */
-.psaltyr-text {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: var(--text-color, #333);
-}
-
-/* If user inserted headings inside the WYSIWYG, style them consistently */
-.psaltyr-text h1,
-.psaltyr-text h2,
-.psaltyr-text h3,
-.psaltyr-text h4 {
-    color: var(--subtitle-color, #BC8C12);
-    margin: 1.8rem 0 1rem;
-    text-align: left;
-    font-weight: 600;
-}
-
-/* Specific sizes for nested headings */
-.psaltyr-text h1 {
-    font-size: 2rem;
-}
-
-.psaltyr-text h2 {
-    font-size: 1.6rem;
-}
-
-.psaltyr-text h3 {
-    font-size: 1.35rem;
-}
-
-/* Ensure paragraphs inside title/subtitle/wysiwyg inherit typographic rules */
-.psaltyr-text p,
-.psaltyr-text li,
-.psaltyr__title p,
-.psaltyr__subtitle p {
-    margin-bottom: 1rem;
-    color: inherit;
-    /* let inline color from editor work, otherwise inherit default */
-}
-
-/* Strong styling: apply both for content and for possible <p><strong> inside titles */
-.psaltyr-text strong,
-.psaltyr-text p strong,
-.psaltyr__title strong,
-.psaltyr__subtitle strong {
-    color: #BC8C12;
-    font-weight: 700;
-}
-
-/* Links inside the text */
-.psaltyr-text a {
-    color: #BC8C12;
-    text-decoration: underline;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-
-    .psaltyr__title,
-    .psaltyr__title p {
-        font-size: 2rem;
-    }
-
-    .psaltyr__subtitle,
-    .psaltyr__subtitle p {
-        font-size: 1.25rem;
-    }
-
-    .psaltyr-text {
-        font-size: 0.98rem;
-    }
 }

@@ -426,9 +426,9 @@ h2.news__subtitle {
 
 .news__img {
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
 }
-
 
 /* section schedule start */
 
@@ -1658,7 +1658,7 @@ footer {
 }
 
 .molod-card__image-wrapper {
-    height: 290px;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -1734,7 +1734,7 @@ footer {
 }
 
 .news__image-wrapper {
-    height: auto;
+    height: 180px;
     overflow: hidden;
 }
 

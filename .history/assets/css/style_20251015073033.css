@@ -424,9 +424,19 @@ h2.news__subtitle {
     margin-top: 40px;
 }
 
-.news__img {
+/* .news__img {
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
+} */
+
+.news__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    width: 100%;
 }
 
 
@@ -1658,7 +1668,7 @@ footer {
 }
 
 .molod-card__image-wrapper {
-    height: 290px;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -1734,7 +1744,7 @@ footer {
 }
 
 .news__image-wrapper {
-    height: auto;
+    height: 180px;
     overflow: hidden;
 }
 

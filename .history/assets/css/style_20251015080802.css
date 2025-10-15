@@ -1658,7 +1658,7 @@ footer {
 }
 
 .molod-card__image-wrapper {
-    height: 290px;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -1736,6 +1736,7 @@ footer {
 .news__image-wrapper {
     height: auto;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .news__image {

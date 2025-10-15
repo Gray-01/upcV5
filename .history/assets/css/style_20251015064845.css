@@ -426,9 +426,9 @@ h2.news__subtitle {
 
 .news__img {
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
 }
-
 
 /* section schedule start */
 
@@ -1658,7 +1658,7 @@ footer {
 }
 
 .molod-card__image-wrapper {
-    height: 290px;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -1734,7 +1734,7 @@ footer {
 }
 
 .news__image-wrapper {
-    height: auto;
+    height: 180px;
     overflow: hidden;
 }
 
@@ -1831,7 +1831,7 @@ footer {
     text-align: center;
 }
 
-/* page psaltar akafist*/
+/* test */
 /* ========== Psaltar / Akafist — fixes for WP autop/wrapping ========== */
 
 /* Ensure styles apply when WP wraps content in <p> inside heading wrappers */
@@ -1842,6 +1842,7 @@ footer {
     line-height: 1.15;
     margin: 0 0 1.5rem;
     text-align: center;
+    /* default color — will be overridden by inline color from editor if present */
     color: var(--title-color, #1c1c1c);
 }
 
