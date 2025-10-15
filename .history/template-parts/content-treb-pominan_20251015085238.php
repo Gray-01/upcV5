@@ -5,11 +5,9 @@
 get_header(); ?>
 
 <section class="treb-pominan">
-  <!-- Заголовки -->
   <h1><?php the_field('treb_heading_h1'); ?></h1>
   <h2><?php the_field('treb_heading_h2'); ?></h2>
 
-  <!-- Картинка -->
   <?php
   $image = get_field('treb_image');
   if($image){
@@ -29,12 +27,7 @@ get_header(); ?>
 
   <!-- Пример записочки -->
   <div class="example-section">
-    <?php
-    $example_table = get_field('treb_example');
-    if ($example_table) {
-        echo apply_filters('the_content', $example_table);
-    }
-    ?>
+    <?php the_field('treb_example'); ?>
   </div>
 
   <!-- Как подавать записочки -->
