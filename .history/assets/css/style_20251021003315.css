@@ -1994,8 +1994,6 @@ footer {
     margin-bottom: 2rem;
     text-align: center;
     /* картинка по центру */
-    display: flex;
-    justify-content: center;
 }
 
 .molod-single__image {

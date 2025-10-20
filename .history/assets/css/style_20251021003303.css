@@ -1981,35 +1981,3 @@ footer {
 }
 
 /* 20251021 start */
-/* === Страница отдельного поста Молодь === */
-.molod-single__title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #BC8C12;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.molod-single__image-wrapper {
-    margin-bottom: 2rem;
-    text-align: center;
-    /* картинка по центру */
-    display: flex;
-    justify-content: center;
-}
-
-.molod-single__image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-}
-
-.molod-single__content {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--text-color, #222);
-    max-width: 900px;
-    margin: 0 auto;
-    /* текст по центру по ширине */
-    text-align: justify;
-}
