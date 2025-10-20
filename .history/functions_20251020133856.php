@@ -129,3 +129,34 @@ add_filter('wp_nav_menu_objects', function($items, $args) {
 }, 20, 2);
 
 // 20251020 start
+// =====================
+// Кастомный тип записи: Паломництва
+// =====================
+add_action('init', function() {
+    $labels = array(
+        'name'               => 'Паломництва',
+        'singular_name'      => 'Паломництво',
+        'menu_name'          => 'Паломництва',
+        'add_new'            => 'Додати нове',
+        'add_new_item'       => 'Додати нове паломництво',
+        'edit_item'          => 'Редагувати паломництво',
+        'new_item'           => 'Нове паломництво',
+        'view_item'          => 'Переглянути паломництво',
+        'all_items'          => 'Усі паломництва',
+        'search_items'       => 'Пошук паломництв',
+        'not_found'          => 'Нічого не знайдено',
+        'not_found_in_trash' => 'У кошику порожньо',
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'has_archive'        => true,
+        'show_in_rest'       => true, // чтобы работал Gutenberg
+        'menu_icon'          => 'dashicons-location-alt',
+        'supports'           => array('title', 'editor', 'thumbnail', 'excerpt'),
+        'rewrite'            => array('slug' => 'pilgrimages'),
+    );
+
+    register_post_type('pilgrimage', $args);
+});

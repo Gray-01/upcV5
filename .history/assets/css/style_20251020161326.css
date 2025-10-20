@@ -1964,14 +1964,13 @@ footer {
 .pilgrimage-single__image-wrapper {
     margin-bottom: 2rem;
     text-align: center;
-    display: flex;
-    justify-content: center;
 }
 
 .pilgrimage-single__image {
     max-width: 100%;
     height: auto;
     border-radius: 1rem;
+    text-align: center;
 }
 
 .pilgrimage-single__content {

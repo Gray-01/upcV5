@@ -1964,8 +1964,6 @@ footer {
 .pilgrimage-single__image-wrapper {
     margin-bottom: 2rem;
     text-align: center;
-    display: flex;
-    justify-content: center;
 }
 
 .pilgrimage-single__image {
