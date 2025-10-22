@@ -2015,7 +2015,7 @@ footer {
 }
 
 /* 20251021 start */
-/* --- базовые твои стили (оставлены как были) --- */
+/* === ОРИГИНАЛЬНЫЕ СТИЛИ (сделал точно как у тебя изначально) === */
 .donate {
     background-color: #FDFDF0;
     padding: 6rem 0;
@@ -2072,11 +2072,12 @@ footer {
     text-align: center;
 }
 
-/* --- добавленные аккуратные стили для копирования --- */
+/* === Дополнительные стили (минимальные, чтобы не ломать дизайн) === */
+
 .donate__list {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.6rem;
     align-items: center;
     margin-top: 0.5rem;
 }
@@ -2084,76 +2085,111 @@ footer {
 .donate__item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 0.3rem 0;
+    width: 100%;
+    padding: 0.4rem 0.2rem;
 }
 
 .donate__label {
     font-weight: 600;
     color: #333;
+    font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 .donate__value {
-    font-weight: 500;
-    color: #000;
+    font-size: 0.98rem;
+    color: #111;
+    word-break: break-word;
+    text-align: center;
 }
 
+/* Кнопка копирования — минимально вмешивается в стиль */
 .donate__copy-btn {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     border-radius: 8px;
-    border: 1px solid rgba(188, 140, 18, 0.25);
+    border: 1px solid rgba(188, 140, 18, 0.15);
     background: transparent;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    transition: all 0.2s ease;
+    transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
 }
 
+/* Иконка через псевдоэлемент — подходит под твои цвета */
 .donate__copy-btn::before {
     content: "";
+    display: inline-block;
     width: 16px;
     height: 16px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23BC8C12' viewBox='0 0 24 24'><path d='M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");
-    background-size: contain;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23BC8C12'><path d='M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
+/* hover */
 .donate__copy-btn:hover {
     transform: translateY(-2px);
-    border-color: rgba(188, 140, 18, 0.45);
-    background-color: rgba(188, 140, 18, 0.05);
+    border-color: rgba(188, 140, 18, 0.35);
+    background: rgba(188, 140, 18, 0.03);
 }
 
+/* сообщение "скопировано" */
 .donate__copy-btn.copied::after {
     content: "Скопійовано!";
     position: absolute;
-    top: -1.4rem;
+    top: -1.6rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     color: #1a7f3a;
     background: #fff;
-    padding: 2px 6px;
+    padding: 0.12rem 0.4rem;
     border-radius: 4px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
-    animation: fadeOut 1.4s forwards;
+    white-space: nowrap;
+    animation: fadeOut 1.5s forwards;
 }
 
+/* анимация для подсказки */
 @keyframes fadeOut {
     0% {
         opacity: 1;
+        transform: translate(-50%, 0);
     }
 
     80% {
         opacity: 1;
+        transform: translate(-50%, 0);
     }
 
     100% {
         opacity: 0;
+        transform: translate(-50%, -6px);
+    }
+}
+
+/* адаптив */
+@media (max-width: 480px) {
+    .donate__item {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .donate__label {
+        font-size: 0.9rem;
+    }
+
+    .donate__value {
+        font-size: 0.95rem;
+    }
+
+    .donate__copy-btn {
+        width: 34px;
+        height: 34px;
     }
 }

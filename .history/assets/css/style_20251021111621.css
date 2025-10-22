@@ -2015,7 +2015,6 @@ footer {
 }
 
 /* 20251021 start */
-/* --- базовые твои стили (оставлены как были) --- */
 .donate {
     background-color: #FDFDF0;
     padding: 6rem 0;
@@ -2072,76 +2071,38 @@ footer {
     text-align: center;
 }
 
-/* --- добавленные аккуратные стили для копирования --- */
-.donate__list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-    margin-top: 0.5rem;
-}
-
-.donate__item {
+/* --- Кнопка копирования --- */
+.donate__copy-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
     justify-content: center;
+    gap: 0.5rem;
     flex-wrap: wrap;
-    padding: 0.3rem 0;
-}
-
-.donate__label {
-    font-weight: 600;
-    color: #333;
-}
-
-.donate__value {
-    font-weight: 500;
-    color: #000;
 }
 
 .donate__copy-btn {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    border: 1px solid rgba(188, 140, 18, 0.25);
-    background: transparent;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: all 0.2s ease;
-}
-
-.donate__copy-btn::before {
-    content: "";
-    width: 16px;
-    height: 16px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23BC8C12' viewBox='0 0 24 24'><path d='M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");
-    background-size: contain;
-    background-repeat: no-repeat;
+    color: #BC8C12;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .donate__copy-btn:hover {
-    transform: translateY(-2px);
-    border-color: rgba(188, 140, 18, 0.45);
-    background-color: rgba(188, 140, 18, 0.05);
+    color: #a47a10;
+    transform: scale(1.1);
 }
 
 .donate__copy-btn.copied::after {
     content: "Скопійовано!";
     position: absolute;
-    top: -1.4rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.75rem;
-    color: #1a7f3a;
-    background: #fff;
-    padding: 2px 6px;
-    border-radius: 4px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
-    animation: fadeOut 1.4s forwards;
+    top: -1.5rem;
+    right: 0;
+    font-size: 0.8rem;
+    color: green;
+    animation: fadeOut 1.5s forwards;
 }
 
 @keyframes fadeOut {

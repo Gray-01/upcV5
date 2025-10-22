@@ -93,7 +93,7 @@ function upcv5_render_field_lines_copyable( $field_name, $skip_labels = [] ) {
             </div>
             <div class="donate__item">
               <div class="donate__label">🏦 Western Union:</div>
-              <div class="donate__value" id="other-2">0045 2298 7741</div>
+              <div class="donate__value" id="other-2">0045 2298 7741 0900</div>
               <button class="donate__copy-btn" data-target="other-2" aria-label="Скопіювати реквізити"></button>
             </div>
             <div class="donate__item">
